@@ -1,0 +1,19 @@
+{
+  "name": "node-angular-practice-1",
+  "version": "1.0.0",
+  "description": "Employees CRUD screen using Angular and Node",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yogeshrc/NodeAngularPractice1.git"
+  },
+  "author": "Yogesh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yogeshrc/NodeAngularPractice1/issues"
+  },
+  "homepage": "https://github.com/yogeshrc/NodeAngularPractice1#readme"
+}
