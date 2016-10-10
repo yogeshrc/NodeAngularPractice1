@@ -1,23 +1,23 @@
 (function(){
     var projectsController = function ($scope, $http) {
-        var apiUrl = '/projects';
-        $scope.projects = [];
-        $scope.projects.push('AngularJS');
-        $scope.projects.push('HTML5');
-        $scope.projects.push('ExpressJS');
-        $scope.projects.push('NodeJS');
-        $scope.projects.push('GitHub');
-        $scope.projects.push('Arduino');
-        
-        $scope.title = "My Hobby Projects using";
-        
         $scope.load = function(){
-            $http.get(apiUrl).then(onHttpGet, onHttpError);
+            $http.get('/projects').then(onHttpGet, onHttpError);
         }
         
         var onHttpGet = function(response){
             console.log(response.data);
+            $scope.projects = response.data.projects;
+            $scope.title = response.data.title;
         }
+        
+        var onHttpError = function(error){
+            console.log(error);
+        }
+        
+        $scope.add = function() {
+            console.log("TODO: Add new project using bodyparser package");
+        }
+        $scope.load();
     }
     
     angular.module('MainModule', [])
